@@ -1,0 +1,12 @@
+Job ID: 22798152
+Array Job ID: 22798151_1
+Cluster: shen
+User/Group: dvm5zm/users
+State: COMPLETED (exit code 0)
+Nodes: 1
+Cores per node: 2
+CPU Utilized: 00:00:10
+CPU Efficiency: 31.25% of 00:00:32 core-walltime
+Job Wall-clock time: 00:00:16
+Memory Utilized: 4.44 GB
+Memory Efficiency: 27.76% of 16.00 GB (16.00 GB/node)

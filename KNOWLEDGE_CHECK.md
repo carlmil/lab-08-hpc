@@ -11,6 +11,7 @@ Redirect the command's output to `results/job-history.txt` and include the file 
 *Hint:* See [Part 1, Step 6](README.md#step-6-check-how-the-tasks-ended) in the README.
 
 **Your answer:** Provide the entire command you used, including all CLI options.
+sacct -u $USER -S 2026-11-04 -X --format=JobID,JobName,NodeList,Partition,Account,User,State,Start,Elapsed > results/job-history.txt
 
 ...
 
@@ -23,7 +24,7 @@ You submitted your entire job array with one `sbatch` command, but Slurm schedul
 *Hint:* See [Part 1, Step 5](README.md#step-5-watch-the-job-array) in the README.
 
 **Your answer:** Did all tasks in the array start at the same time? Was the elapsed time identical for every task? Explain why or why not.
-
+No most of my tasks did not start at the same time. My frist task began at 11:38 pm and my last task finished around 2 am. The elapsed time was not identical for every task. Part of the reason my tasks took a long time to be completed was because my tasks are not the only ones in the queue. I was able to see that other users were using the gpu and also had tasks queued in front of mine. The elapsed time was also different for each task because each book are different lengths and the processing time for them may vary because of that.       
 ...
 
 ## 3. Slurm: did my job use what it asked for?
@@ -35,6 +36,5 @@ Suppose your next job array has 1,000 books instead of 101. Before you submit it
 *Hint:* `seff` takes the ID of one task, such as `4211873_1`. Compare its **Memory Utilized** and **Job Wall-clock time** with `--mem` and `--time` in your `summarize.slurm`.
 
 **Your answer:** How much memory and time did the task use, compared with what your script asked for? What would you change in your script, and why?
-
+The task took up 4.44 GB and 16 seconds to do. The script was asked for 16 GB and 5 minutes at most.I would not change anything in my script because I know each of my tasks will have ample time and memory to be completed. If gave too little time, I'm at risk of timing out my task. If my task does not have enough memory space, it might be killed.
 ...
-
